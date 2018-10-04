@@ -1,0 +1,18 @@
+#Makefile for file_wr
+EXE = file_wr
+OBJ = file_wr.o
+SRC = file_wr.c
+CC  = gcc
+
+CFLAGS = -g
+LDFLAGS =
+
+file_wr:file_wr.o
+	gcc -o file_wr file_wr.o
+
+file_wr.o:file_wr.c
+	gcc -g -o file_wr.o -c file_wr.c
+
+.PHONY:clean
+clean:
+	-rm -f file_wr.o file_wr
